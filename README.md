@@ -1,5 +1,4 @@
 ## 起動方法
-- docker compose build --no-cache
 - docker compose up
 
 ## バックエンド(django)

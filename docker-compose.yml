@@ -8,11 +8,11 @@ services:
     volumes:
       - ./backend_Project/backend:/backend
     command: python3 /backend/manage.py runserver 0.0.0.0:8000
+    container_name: backend
     ports:
       - "8000:8000"
     tty: true
   
-  #ここから追加
   frontend:
     build:
       context: ./frontend_Project
@@ -20,5 +20,6 @@ services:
     volumes:
       - ./frontend_Project/node/frontend:/usr/src/app/frontend
     command: sh -c "cd /usr/src/app/frontend && yarn start"
+    container_name: frontend
     ports:
       - "3000:3000"
