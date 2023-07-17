@@ -5,3 +5,4 @@ WORKDIR /backend
 ADD requirements.txt /backend/
 RUN pip install -r requirements.txt
 ADD . /backend/
+RUN export PYTHONDONTWRITEBYTECODE=1
