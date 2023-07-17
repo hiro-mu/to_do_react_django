@@ -135,3 +135,5 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     )
 }
+
+PYTHONDONTWRITEBYTECODE = 1
