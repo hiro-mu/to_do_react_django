@@ -52,6 +52,12 @@ class App extends Component {
       .then((res) => this.refreshList());
   };
 
+  handleDuplicate = (item) => {
+    axios
+      .post("/api/todos/", item)
+      .then((res) => this.refreshList());
+  }
+
   createItem = () => {
     const item = { title: "", description: "", completed: false };
 
@@ -114,6 +120,12 @@ class App extends Component {
             onClick={() => this.editItem(item)}
           >
             Edit
+          </button>
+          <button
+            className="btn btn-secondary mr-2 duplicate"
+            onClick={() => this.handleDuplicate(item)}
+          >
+            Duplicate
           </button>
           <button
             className="btn btn-danger"
