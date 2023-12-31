@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Modal from "./components/Modal";
+import { CustomModal } from "./components/Modal";
 import axios from "axios";
 
 export const App = () => {
@@ -158,7 +158,7 @@ export const App = () => {
         </div>
       </div>
       {modal ? (
-        <Modal
+        <CustomModal
           activeItem={activeItem}
           toggle={toggle}
           onSave={handleSubmit}
